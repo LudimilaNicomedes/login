@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Welcome back!</h1>
+            <p class="texto">Simplify your workflow and boost your productivity <br>with <span class="destaque">Tuga's App.</span> Get started for free.</p>
+            <form action="" id="formlogin">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="E-mail">
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <a class="senha_esquecida" href="">Forgot Password?</a>
+                <button class="botLogin" type="submit">Login</button>
+            </form>
+            <p>or continue with</p>
+            <div class="links">
+                <button type="button"><img src="/img/icons8-google-plus-48.png" alt="Google"></button>
+                <button type="button"><img src="/img/icons8-facebook-novo-50.png" alt="Facebook"></button>
+                <button type="button"><img src="/img/icons8-mac-os-50.png" alt="Apple"></button>
+            </div>
+
+            <p class="texto_dois">Not a member?<a href="/cadastro.html">Register now</a></p>
+        </div>
+
+        <div class="carrossel">
+            <div class="slide">
+                <img src="/img/Captura de tela 2026-06-29 192920.png" alt="" class="">
+                <img src="/img/Captura de tela 2026-06-29 192931.png" alt="" class="">
+                <img src="/img/Captura de tela 2026-06-29 192954.png" alt="" class="">
+            </div>
+
+            <button class="esquerdo"></button>
+            <button class="direito"></button>
+            <h6>Make your work easier and organized<br> with <span class="destaque">Tuga's App</span></h6>
+        </div>
+    </main>
+    <script src="/script.js"></script>
+
+    <script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: "https://estudostestes.app.n8n.cloud/webhook/5f3516dd-df1d-4a51-b2f0-da0a783ddc3a/chat",
+        showWelcomeScreen: true,
+        initialMessages: [
+            'Olá! Sou o assistente de login. Como posso te ajudar hoje?'
+        ],
+        i18n: {
+            en: {
+                inputPlaceholder: 'Digite sua dúvida...',
+      }
+    }
+	});
+
+</script>
+</body>
+</html>
