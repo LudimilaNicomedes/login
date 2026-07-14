@@ -27,7 +27,7 @@ Este é um sistema completo de autenticação de usuários (Login e Cadastro) de
 ### **Banco de Dados**
 *   **SQL Server & pyodbc:** Armazenamento seguro de dados cadastrais e execução de queries relacionais.
 
-### **Integrações**
-*   **n8n Webhook:** Chatbot de atendimento dinâmico conectado diretamente às telas do usuário.
-
+### **Automação & Integrações**
+*   **n8n (Workflow Automation):** Criação e hospedagem de um fluxo de automação via Webhook para processar mensagens e gerenciar o comportamento do assistente virtual em tempo real.
+*   
 *   👉 [Clique aqui para acessar o projeto no ar](https://sistema-simples-login.netlify.app/)
