@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from db import conexao
+import db
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -27,7 +27,8 @@ class LoginSchema(BaseModel):
 class chat(BaseModel):
     perguinta: str
 
-@app.post('/conta')
+"""
+#@app.post('/conta')
 async def conta(dados: LoginSchema):
     cursor = conexao.cursor() 
     cursor.execute(
@@ -59,5 +60,6 @@ async def criar_conta(dados: UsuarioSchema):
         (dados.nome, dados.email, dados.senha))
     conexao.commit()
     cursor.close()  
+"""
     
-    return {'status': 'Conta criada com sucesso'}
+    #return {'status': 'Conta criada com sucesso'}
