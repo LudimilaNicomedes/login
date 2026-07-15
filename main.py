@@ -29,7 +29,7 @@ class chat(BaseModel):
     perguinta: str
 
 
-@app.post('/conta')
+@app.post('/conta/')
 async def conta(dados: LoginSchema):
     # Busca o usuário no arquivo JSON simulação
     usuario = db.buscar_usuario_por_email(dados.email)
@@ -40,7 +40,7 @@ async def conta(dados: LoginSchema):
         
     return {"status": "Login efetuado com sucesso"}
 
-@app.post('/criar_conta')
+@app.post('/criar_conta/')
 async def criar_conta(dados: UsuarioSchema):
     # Verifica se o e-mail já está cadastrado
     usuario_existente = db.buscar_usuario_por_email(dados.email)
@@ -50,17 +50,6 @@ async def criar_conta(dados: UsuarioSchema):
     # Cadastra o novo usuário no arquivo JSON
     db.cadastrar_usuario(dados.nome, dados.email, dados.senha)
     return {"status": "Conta criada com sucesso!"}
-
-
-
-
-
-
-
-
-
-
-
 
 
 

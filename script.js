@@ -47,7 +47,7 @@ formLogin.addEventListener("submit", async (event) => {
     };
 
     try {                              
-        const resposta = await fetch(" https://login-iqyw.onrender.com/conta", {
+        const resposta = await fetch(" https://login-iqyw.onrender.com/conta/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
