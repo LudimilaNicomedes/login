@@ -1,11 +1,11 @@
 # 🔐 Sistema de Login & Cadastro Full Stack
 
-Este é um sistema completo de autenticação de usuários (Login e Cadastro) desenvolvido com uma arquitetura Full Stack. O projeto integra uma interface moderna e responsiva a uma API robusta conectada a um banco de dados relacional, além de contar com um assistente virtual integrado via webhook.
+Este é um sistema de autenticação de usuários (Login e Cadastro) desenvolvido com uma arquitetura Full Stack. O projeto integra uma API robusta conectada a um banco de dados relacional, além de contar com um assistente virtual integrado via webhook.
 
 ## 💡 Sobre o Projeto
-Este sistema foi arquitetado originalmente com foco em **bancos de dados relacionais (SQL Server)**, demonstrando uma lógica de persistência de dados estruturada. 
+Este sistema foi arquitetado originalmente com foco em **bancos de dados relacionais (SQL Server)**
 
-Para viabilizar a hospedagem em ambiente de nuvem (serverless) e garantir a acessibilidade global do projeto, a camada de persistência foi adaptada para um sistema de persistência local em JSON, mantendo toda a lógica de negócio e os padrões de design do sistema original. Esta adaptação demonstra a capacidade de transitar entre diferentes estratégias de armazenamento (relacional vs. arquivo) sem comprometer a integridade da aplicação.
+Para viabilizar a hospedagem em ambiente de nuvem (serverless) e garantir a acessibilidade global do projeto, a camada de persistência foi adaptada para um sistema de persistência local em JSON, mantendo toda a lógica de negócio e os padrões de design do sistema original.
 
 ---
 
@@ -28,7 +28,6 @@ Para viabilizar a hospedagem em ambiente de nuvem (serverless) e garantir a aces
 ### **Back-end**
 *   **Python (FastAPI):** Criação de rotas assíncronas de alta performance para a API de autenticação.
 *   **Pydantic:** Criação de schemas de validação de dados (`UsuarioSchema` e `LoginSchema`).
-
 
 ### **Automação & Integrações**
 *   **n8n (Workflow Automation):** Criação e hospedagem de um fluxo de automação via Webhook para processar mensagens e gerenciar o comportamento do assistente virtual em tempo real.
