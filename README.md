@@ -32,4 +32,4 @@ Para viabilizar a hospedagem em ambiente de nuvem (serverless) e garantir a aces
 ### **Automação & Integrações**
 *   **n8n (Workflow Automation):** Criação e hospedagem de um fluxo de automação via Webhook para processar mensagens e gerenciar o comportamento do assistente virtual em tempo real.
 *   
-*   👉 [Clique aqui para acessar o projeto no ar]https://loginsimples.netlify.app/
+*   👉 [Clique aqui para acessar o projeto no ar](https://loginsimples.netlify.app/)
