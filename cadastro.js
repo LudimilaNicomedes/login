@@ -15,7 +15,7 @@ formCadastro.addEventListener("submit", async (event) => {
 
                                         //pegando o rota do main em python
     try {                              
-        const resposta = await fetch(" http://127.0.0.1:8000/criar_conta", {
+        const resposta = await fetch(" https://login-iqyw.onrender.com/criar_conta", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

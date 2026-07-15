@@ -47,7 +47,7 @@ formLogin.addEventListener("submit", async (event) => {
     };
 
     try {                              
-        const resposta = await fetch(" http://127.0.0.1:8000/conta", {
+        const resposta = await fetch(" https://login-iqyw.onrender.com/conta", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
