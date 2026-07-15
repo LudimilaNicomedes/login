@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+# from db import conexao
 import db
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -26,6 +27,46 @@ class LoginSchema(BaseModel):
     senha: str
 class chat(BaseModel):
     perguinta: str
+
+
+@app.post('/conta')
+async def conta(dados: LoginSchema):
+    # Busca o usuário no arquivo JSON simulação
+    usuario = db.buscar_usuario_por_email(dados.email)
+    
+    # Valida e-mail e senha
+    if usuario is None or usuario["senha"] != dados.senha:
+        return {"erro": "E-mail ou senha inválidos"}
+        
+    return {"status": "Login efetuado com sucesso"}
+
+@app.post('/criar_conta')
+async def criar_conta(dados: UsuarioSchema):
+    # Verifica se o e-mail já está cadastrado
+    usuario_existente = db.buscar_usuario_por_email(dados.email)
+    if usuario_existente:
+        return {"erro": "E-mail já cadastrado"}
+        
+    # Cadastra o novo usuário no arquivo JSON
+    db.cadastrar_usuario(dados.nome, dados.email, dados.senha)
+    return {"status": "Conta criada com sucesso!"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 """
 #@app.post('/conta')
@@ -59,7 +100,8 @@ async def criar_conta(dados: UsuarioSchema):
         "INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)",
         (dados.nome, dados.email, dados.senha))
     conexao.commit()
-    cursor.close()  
+    cursor.close()
+    return {'status': 'Conta criada com sucesso'}  
 """
     
-    #return {'status': 'Conta criada com sucesso'}
+  
