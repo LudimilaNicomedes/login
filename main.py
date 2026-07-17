@@ -25,8 +25,7 @@ class UsuarioSchema(BaseModel):
 class LoginSchema(BaseModel):
     email: str
     senha: str
-class chat(BaseModel):
-    perguinta: str
+
 
 
 @app.post('/conta/')
@@ -58,7 +57,7 @@ async def criar_conta(dados: UsuarioSchema):
 
 
 """
-#@app.post('/conta')
+@app.post('/conta')
 async def conta(dados: LoginSchema):
     cursor = conexao.cursor() 
     cursor.execute(
